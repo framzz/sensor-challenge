@@ -17,6 +17,7 @@ You are provided 3 files: the log file named “**equipment_failure_sensors.txt*
 
 > - **You're free to modify the files into any extension, as long as the main data is preserved. If you wish to modify the source data, make sure you use a copy method to keep the new data decoupled from the source data.**
 
+
 1. Total equipment failures that happened?
 
 2. Which equipment name had most failures?
@@ -38,3 +39,75 @@ You are provided 3 files: the log file named “**equipment_failure_sensors.txt*
 >- Simulate a streaming pipeline.
 >- Dockerize your app.
 >- Orchestration architecture.
+
+# Mariana's Resolution:
+
+## Solution
+
+In this tech case, I chose to use Pyspark to answer the questions.
+
+## Files
+
+**Description**: Repository Files description
+
+|Name|Description|
+|-------|---------|
+|Dockerfile| Requirements to run this project with Docker|
+|equipment_failure_sensors.rar| RAR with Log File inside|
+|equipment_sensors.csv| File with relationships between sensors and equipments|
+|equipment.json| File with equipment data|
+|main.py| File with the main code|
+|tests.py| File with tests|
+|setup.py| File with project setup|
+|requirements.txt| File with project requirements|
+
+## How to execute the project
+
+Do not forget to extract equipment_failure_sensors.rar!!!
+# System Requirements:
+
+This code was developed using the following system configuration:
+- Python 3.8.0
+- Java 20.0.2
+- pip 19.2.3
+- Spark 3.4.1
+- Hadoop 3.0.0
+
+# Executing pipeline in a Virtual Enviroment (Windows):
+
+- Create a virtual enviroment in your directory: 
+```
+python -m venv env
+ ```
+- Activate the virtual enviroment: 
+```
+env\scripts\activate
+ ```
+- Install the project requirements:
+```
+pip install -r requirements.txt
+ ```
+- Run `main.py` file:
+```
+python main.py
+```
+
+# Executing pipeline in Docker:
+
+- Change the requirements.txt file to match with datamechanics/spark versions:
+```
+pyspark==3.2.1
+py4j==0.10.9.3
+```
+- Build your image in the Dockerfile directory:
+```
+docker build -t project-image .
+```
+- Run your image to create a container:
+```
+docker run -it project-image
+```
+
+## Orchestration Architecture:
+
+# 

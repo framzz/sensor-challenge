@@ -1,0 +1,8 @@
+pyspark==3.4.1
+py4j==0.10.9.7
+numpy
+pandas
+matplotlib
+seaborn
+ruamel.yaml.clib==0.2.7
+-e .
